@@ -2,7 +2,7 @@
 
 This Terraform project deploys a complete AWS infrastructure for running Strapi CMS with the following architecture:
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 - **VPC** with public and private subnets across 2 availability zones
 - **Internet Gateway** for public subnet internet access
@@ -12,7 +12,7 @@ This Terraform project deploys a complete AWS infrastructure for running Strapi 
 - **Security Groups** for controlled access
 - **IAM Roles** for EC2 instance permissions
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have:
 
@@ -31,7 +31,7 @@ Before you begin, ensure you have:
    ssh-keygen -t rsa -b 4096 -f ~/.ssh/strapi-key -N ""
    ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Step 1: Clone and Setup
 
@@ -118,7 +118,7 @@ Open the URL in your browser. Wait 2-3 minutes for Strapi to fully initialize.
 
 Access Strapi admin panel at: `http://<alb-dns-name>/admin`
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -133,7 +133,7 @@ Access Strapi admin panel at: `http://<alb-dns-name>/admin`
 └── README.md                   # This file
 ```
 
-## 🔧 Infrastructure Components
+##  Infrastructure Components
 
 ### VPC Configuration
 - **CIDR Block**: Configurable (default: 10.0.0.0/16)
@@ -156,7 +156,7 @@ Access Strapi admin panel at: `http://<alb-dns-name>/admin`
 - **Strapi**: Running in Docker container
 - **Auto-restart**: Health check every 5 minutes
 
-## 🔐 Security Best Practices
+##  Security Best Practices
 
 1. **SSH Access**: Restrict `allowed_ssh_cidrs` to your IP only
 2. **Secrets**: Never commit `.tfvars` files with real secrets
@@ -164,7 +164,7 @@ Access Strapi admin panel at: `http://<alb-dns-name>/admin`
 4. **IAM**: Least privilege access with SSM for instance management
 5. **Network**: EC2 in private subnet, only ALB is public
 
-## 📊 Outputs
+##  Outputs
 
 After deployment, you'll get:
 
@@ -179,7 +179,7 @@ Key outputs:
 - `ec2_private_ip`: Private IP of EC2 instance
 - `vpc_id`: VPC ID
 
-## 🌍 Multi-Environment Management
+##  Multi-Environment Management
 
 ### Development
 ```bash
@@ -199,7 +199,7 @@ terraform workspace new prod
 terraform apply -var-file="production.tfvars"
 ```
 
-## 🔄 Common Commands
+##  Common Commands
 
 ### View Current Infrastructure
 ```bash
@@ -232,7 +232,7 @@ terraform validate
 terraform destroy -var-file="terraform.tfvars"
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Strapi Not Loading
 1. Wait 3-5 minutes after deployment for Strapi to initialize
