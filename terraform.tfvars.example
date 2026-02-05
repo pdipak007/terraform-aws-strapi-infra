@@ -1,0 +1,21 @@
+aws_region = "us-east-1"
+project_name = "strapi-terraform"
+environment = "dev"
+
+vpc_cidr = "10.0.0.0/16"
+
+ssh_public_key = "ssh-rsa AAAA...REPLACE_ME"
+
+allowed_ssh_cidrs = ["YOUR_IP/32"]
+
+instance_type = "t3.small"
+root_volume_size = 20
+
+strapi_app_keys       = "key1,key2,key3,key4"
+strapi_api_token_salt = "replace_me"
+strapi_admin_jwt      = "replace_me"
+strapi_jwt_secret     = "replace_me"
+
+database_client   = "sqlite"
+database_filename = ".tmp/data.db"
+node_env          = "development"
